@@ -46,7 +46,7 @@
       </div>
       <div class="modal-body">
         <div class="container">
-        <form class="form-horizontal" role="form" method="POST" action="/login">
+        <form class="form-horizontal" role="form" method="POST" action="http://trscend.com/login" id="login-form">
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
@@ -110,14 +110,14 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Login</button>
-                    <a class="btn btn-link" href="/password/reset">Forgot Your Password?</a>
+                    	<a href="http://trscend.com/password_forgotten">Forgotten Password ?</a>
                 </div>
             </div>
         </form>
     </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+        <button type="submit" value="Login" class="btn btn-primary" data-dismiss="modal">Log in</button>
 
       </div>
     </div>
@@ -148,7 +148,7 @@
               <h1 class="cover-heading">Hi. This is Trscend.</h1>
               <p class="lead">Save time and money, </br> and improve your business for free.</p>
               <p class="lead">
-                <a href="#" class="btn btn-lg btn-secondary">Sign Up</a>
+                <a href="#registration-form" class="btn btn-lg btn-secondary">Sign Up</a>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
     Play Video
   </button>
@@ -211,7 +211,9 @@
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">About Trscend</h1>
+          <hr class="style1">
           <p class="lead">Making business easy</p>
+
         </div>
       </div>
       <div class="container">
@@ -290,8 +292,8 @@
       </div>
 </div>
        <!-- registration form -->
-       <div class="container" id="formstyle">
-         <form class="form-horizontal" role="form" method="POST" action="/register">
+       <div class="container" id="registration-form">
+         <form class="form-horizontal control-this-form" role="form" method="POST" action="http://trscend.com/registration">
              <div class="row">
 
                  <div class="col-md-12">
@@ -301,14 +303,23 @@
              </div>
              <div class="row">
                  <div class="col-md-3 field-label-responsive">
-                     <label for="name">Name</label>
+                     <label for="name">Company/e-mail</label>
                  </div>
-                 <div class="col-md-6">
+                 <div class="col-md-3">
                      <div class="form-group">
                          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
-                             <input type="text" name="name" class="form-control" id="name"
-                                    placeholder="John Doe" required autofocus>
+                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-briefcase"></i></div>
+                             <input type="text" name="company" class="form-control" id="name"
+                                    placeholder="Company (*)" required autofocus>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3">
+                     <div class="form-group">
+                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                             <input type="text" name="email" class="form-control" id="name"
+                                    placeholder="E-mail (*)" required autofocus>
                          </div>
                      </div>
                  </div>
@@ -322,14 +333,23 @@
              </div>
              <div class="row">
                  <div class="col-md-3 field-label-responsive">
-                     <label for="email">E-Mail Address</label>
+                     <label for="email">Adress</label>
                  </div>
-                 <div class="col-md-6">
+                 <div class="col-md-3">
                      <div class="form-group">
                          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-                             <input type="text" name="email" class="form-control" id="email"
-                                    placeholder="you@example.com" required autofocus>
+                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-map-marker"></i></div>
+                             <input type="text" name="state_city" class="form-control"
+                                    placeholder="State / City (*)" required autofocus>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3">
+                     <div class="form-group">
+                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-phone"></i></div>
+                             <input type="text" name="phone_number" class="form-control"
+                                    placeholder="Phone N°"  autofocus>
                          </div>
                      </div>
                  </div>
@@ -343,43 +363,61 @@
              </div>
              <div class="row">
                  <div class="col-md-3 field-label-responsive">
-                     <label for="password">Password</label>
+                     <label for="password">Contact Name</label>
                  </div>
                  <div class="col-md-6">
                      <div class="form-group has-danger">
                          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
-                             <input type="password" name="password" class="form-control" id="password"
-                                    placeholder="Password" required>
+                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                             <input type="text" name="contanct_name" class="form-control"
+                                    placeholder="Contact Name (*)" required>
                          </div>
                      </div>
                  </div>
                  <div class="col-md-3">
                      <div class="form-control-feedback">
                              <span class="text-danger align-middle">
-                                 <i class="fa fa-close"> Example Error Message</i>
+
                              </span>
                      </div>
                  </div>
              </div>
              <div class="row">
                  <div class="col-md-3 field-label-responsive">
-                     <label for="password">Confirm Password</label>
+                     <label for="password">Password</label>
                  </div>
-                 <div class="col-md-6">
+                 <div class="col-md-3">
+                     <div class="form-group">
+                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                             <div class="input-group-addon" style="width: 2.6rem">
+                                 <i class="fa fa-lock"></i>
+                             </div>
+                             <input type="password" name="password" class="form-control"
+                                    id="original-password" placeholder="Password" required>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3">
                      <div class="form-group">
                          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                              <div class="input-group-addon" style="width: 2.6rem">
                                  <i class="fa fa-repeat"></i>
                              </div>
                              <input type="password" name="password-confirmation" class="form-control"
-                                    id="password-confirm" placeholder="Password" required>
+                                  placeholder="Repeat Password" required>
                          </div>
                      </div>
                  </div>
              </div>
              <div class="row">
-                 <div class="col-md-3"></div>
+                 <div class="col-md-6">
+                   <div class="form-check">
+   <label class="form-check-label">
+     <input type="checkbox" class="form-check-input" id="terms-agreement" name="terms_agreement">
+     I agree with <a href="http://trscend.com/terms_of_use">terms of use</a>
+   </label>
+ </div>
+                 </div>
                  <div class="col-md-6">
                      <button type="submit" class="btn btn-success"><i class="fa fa-user-plus"></i> Register</button>
                  </div>
