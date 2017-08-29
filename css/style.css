@@ -81,7 +81,7 @@ overflow: hidden;
  * Globals
  */
  .whitebg {
-   background: white;
+   background: #97AEBC;
  }
 /* Links */
 a,
@@ -182,7 +182,7 @@ body {
 }
 
 
-@media (min-width: 40em) {
+@media (min-width: 20em) {
 
     /* Start the vertical centering */
     .site-wrapper-inner {
@@ -224,33 +224,39 @@ body {
 
 .marketing {
   background: url('../img/pic04.jpg');
-  padding-bottom: 0;
-  margin-bottom: 0;
   color: white;
-  font-stretch: normal;
-  height: 50vh;
-  max-width: 100%;
-
+  min-width: 100%;
 }
 
-.col-lg-4:first-child {
+.marketing .col-sm-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.marketing h2 {
+    font-weight: normal;
+}
+.marketing .col-sm-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+.col-sm-4:first-child {
   background: rgba(140, 149, 158,0.4);
   background-size: auto;
-  width: 25vw;
-  height: 50vh;
+
+
   padding-top: 3em;
   border-radius: 100px;
 
 }
-.col-lg-4:nth-child(-3n+2) {
+.col-sm-4:nth-child(-3n+2) {
   background: rgba(102, 107, 135, 0.7);
-  width: 27vw;
+
   padding-top: 3em;
   border-radius: 100px;
 }
-.col-lg-4:nth-child(-3n+3) {
+.col-sm-4:nth-child(-3n+3) {
   background: rgba(51, 76, 221,0.4);
-  width: 27vw;
+
   padding-top: 3em;
   border-radius: 100px;
 }
@@ -261,7 +267,7 @@ body {
 }
 
 #borderbox > :nth-child(-n+2) {
-		border-right: solid 1px #000;
+
 	}
 /* sekcija tri */
 #about {
@@ -274,4 +280,19 @@ body {
 #about img {
  height: 30vh;
  width: auto;
+}
+
+
+/* registration form and responsive */
+#formstyle {
+
+    background-size: cover;
+    width: 100vw;
+}
+
+@media(min-width: 768px) {
+  .field-label-responsive {
+    padding-top: .5rem;
+    text-align: right;
+  }
 }
